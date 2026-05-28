@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: MPL-2.0
+// SPDX-FileCopyrightText: 2026 Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
+= hpm-github-api-rsr — Roadmap
+v0.1.0-dev, 2026-05-28
+:toc: left
+:toclevels: 2
+
+== v0.1 — Core 7 ops (current)
+
+*Status: done in scaffold; awaiting CI / packaging.*
+
+* [x] RSR layout (src/abi/, ffi/zig/)
+* [x] Idris2 ABI: Types + Foreign
+* [x] Zig FFI: JWT generation + 6 high-level ops
+* [x] Composition with hpm-crypto-rsr (RS256 signing) +
+  hpm-http-client-rsr (HTTPS) + hpm-json-rsr (parse/escape)
+* [ ] Generated C header `generated/abi/hpm_github_api.h`
+* [ ] CI: `zig build test` on every PR (requires sibling libs in CI image)
+
+== v0.2 — Webhook verification
+
+*Status: planned.*
+
+* [ ] `hpm_github_verify_webhook_signature` (HMAC-SHA256 of body using shared secret)
+* [ ] Token caching helper (in-process; respects `expires_at`)
+
+== v0.3 — Pagination + rate-limit
+
+* [ ] Cursor-aware list endpoints (PR list, issue list, etc.)
+* [ ] Surface `X-RateLimit-*` headers on responses
+
+== v1.0 — Stable
+
+* [ ] All of v0.1 → v0.3 shipped
+* [ ] Used in production by OikosBot
+* [ ] API surface frozen; semver kicks in

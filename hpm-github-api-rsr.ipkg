@@ -1,0 +1,13 @@
+-- SPDX-License-Identifier: MPL-2.0
+package hpm-github-api-rsr
+version = 0.1.0
+
+authors = "Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>"
+license = "MPL-2.0"
+brief = "GitHub App API client (Idris2 ABI + Zig FFI; composes crypto/http/json)"
+readme = "README.adoc"
+sourcedir = "src"
+
+modules =
+    HpmGithubApi.ABI.Types,
+    HpmGithubApi.ABI.Foreign

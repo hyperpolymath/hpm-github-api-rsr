@@ -1,0 +1,18 @@
+# Zig
+.zig-cache/
+zig-out/
+
+# Idris2
+build/
+*.ttc
+*.ttm
+
+# Editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
