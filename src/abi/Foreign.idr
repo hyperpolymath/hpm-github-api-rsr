@@ -1,3 +1,5 @@
+-- SPDX-License-Identifier: MPL-2.0
+-- Copyright (c) Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 ||| hpm-github-api-rsr — %foreign declarations binding into libhpm_github_api.so.
 |||
 ||| Returned `AnyPtr`s are opaque heap handles; callers MUST eventually
