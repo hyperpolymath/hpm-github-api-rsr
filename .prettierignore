@@ -1,0 +1,2 @@
+# Prettier must not reformat package.json.
+package.json
