@@ -2,7 +2,7 @@
 # Language runtimes
 rust = "latest"
 zig = "latest"
-bun = "latest"
+bun = "1.4"
 denojs = "latest"
 
 # Package managers
@@ -37,11 +37,15 @@ task = "go-task"
 description = "Install pinned JS dev tools (Prettier) from bun.lock"
 run = "bun install --frozen-lockfile"
 
+# Links against the sibling hpm-crypto-rsr, hpm-http-client-rsr and hpm-json-rsr libraries;
+# build those first (see README).
 [tasks.build]
-run = "cargo build --release"
+dir = "ffi/zig"
+run = "zig build"
 
 [tasks.test]
-run = "cargo test"
+dir = "ffi/zig"
+run = "zig build test"
 
 [tasks.lint]
 depends = ["setup"]
